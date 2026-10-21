@@ -1,0 +1,113 @@
+@use 'variaveis' as v;
+@use "sass:math";
+
+//MENU
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: v.$cor-fundo;
+    color: v.$cor-destaque;
+    padding: v.$espacamento 5%;
+
+    &__list{
+        display: flex;
+        gap: 1.56rem;
+    }
+
+    &__link{
+        color: v.$cor-branco;
+        text-decoration: none;
+    }
+}
+
+//SEÇÔES
+section {
+    padding: v.$espacamento-secao;
+}
+
+//HOME
+.home {
+    color: v.$cor-branco;
+    text-align: right;
+    min-height: 100vh;
+    background-image:
+        linear-gradient(rgba(5, 30, 20, 0.55), rgba(5, 30, 20, 0.55)),
+        url("../imagens/fundo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+     &__titulo {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        color: v.$cor-destaque;
+        margin-bottom: 1rem;
+    }
+
+    &__paragrafo {
+        font-size: clamp(0.7rem, 2vw, 1.7rem);
+        color: v.$cor-destaque;
+    }
+}
+
+//SOBRE
+.sobre{
+    &__titulo {
+    color: v.$cor-destaque;
+    font-size: v.$tamanho-fonte-titulo;
+    }
+
+    &__paragrafo {
+        color: v.$cor-branco;
+        font-size: calc(v.$tamanho-fonte-titulo / 2);
+    }
+}
+
+//SERVIÇOS
+.servicos{
+    &__titulo {
+    color: v.$cor-destaque;
+    font-size: v.$tamanho-fonte-titulo;
+    }
+
+    &__list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    }
+}
+
+//DEPOIMENTOS
+.depoimentos{
+    &__titulo {
+    color: v.$cor-destaque;
+    font-size: v.$tamanho-fonte-titulo;
+    }
+
+    &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    }
+}
+
+//CONTATO
+.contato{
+    background-color: v.$cor-menu;
+    color: v.$cor-branco;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    &__titulo {
+        color: v.$cor-destaque;
+        font-size: v.$tamanho-fonte-titulo;
+    }
+
+    &__paragrafo {
+        color: v.$cor-branco;
+        font-size: 2rem;
+        padding: 0.7rem;
+    }
+}
